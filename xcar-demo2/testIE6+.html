@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style type="text/css">
+    /*CSS 属性选择器*/
+    /*下面的例子为带有 ms-controller 属性的所有元素设置样式：*/
+    .ms-controller , [ms-controller]{
+        visibility: hidden;
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div class="container"  ms-controller='demo' class="ms-controller">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Avalon demo</h1>
+        <div id="app">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th class="text-right">序号</th>
+                    <th class="text-right">书名</th>
+                    <th class="text-right">作者</th>
+                    <th class="text-right">价格</th>
+                    <th class="text-right">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--排序按sortparam排序 构思巧妙-->
+                <tr ms-for="book in @books | orderBy @order">
+                    <td class="text-right" >{{book.id}}</td>
+                    <td class="text-right">{{book.name}}</td>
+                    <td class="text-right">{{book.author}}</td>
+                    <td class="text-right">{{book.price}}</td>
+                    <td class="text-right" ms-if="book.id%2==0">
+                        <button type="button" class="btn btn-success" ms-on-click="@delBook(book)">删除</button>
+                    </td>
+                    <td class="text-right" ms-if="book.id%2!=0">
+                        <button type="button" class="btn btn-danger" ms-on-click="@delBook(book)">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right" colspan="5">
+                        <h4>总价:{{@sum}}</h4></td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="add-book">
+                <legend>添加书籍</legend>
+                <div class="form-group">
+                    <label for="">书名</label>
+                    <input type="text" class="form-control" ms-duplex="book.name">
+                </div>
+                <div class="form-group">
+                    <label for="">作者</label>
+                    <input type="text" class="form-control" ms-duplex="book.author">
+                </div>
+                <div class="form-group">
+                    <label for="">价格</label>
+                    <input type="text" class="form-control" ms-duplex="book.price">
+                </div>
+                <button class="btn btn-primary btn-block"  ms-on-click="addBook()">添加</button>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../node_modules/avalon2/dist/avalon.js"></script>
+<script>
+    var vm = avalon.define({
+        $id: 'demo',
+        book:{
+            "id":'',
+            "author":"",
+            "name":"",
+            "price":''
+        },
+//        sortBy:function(sortparam){
+//            vm.order = sortparam;
+//            if(vm.dir==1){
+//                vm.dir=-1
+//            }else{
+//                vm.dir=1
+//            }
+//        },
+        delBook:function(book){
+            var booksarray =  vm.books;
+            for(var i = 0;i<booksarray.length;i++){
+                if(book.id===booksarray[i].id){
+                    booksarray.splice(i,1)
+                }
+            }
+        },
+        addBook:function(){
+            vm.book.id = vm.books.length+1;
+            vm.books.push(vm.book.$model);
+            vm.book = {
+                id:'',
+                author: '',
+                name:'',
+                price: ''
+            };
+            avalon.scan(document.body);
+        },
+        $computed:{
+            sum:function(){
+                var result = 0;
+                for (var i = 0; i < vm.books.length; i++) {
+                    result = Number(vm.books[i].price) + result;
+                };
+                return result;
+            }
+        },
+        books:[
+            {
+                "id":1,
+                "author":"曹雪芹",
+                "name":"红楼梦",
+                "price":32
+            },
+            {
+                "id":2,
+                "author":"施耐庵",
+                "name":"水浒传",
+                "price":30
+            },
+            {
+                "id":"3",
+                "author":"罗贯中",
+                "name":"三国演义",
+                "price":24
+            },
+            {
+                "id":4,
+                "author":"吴承恩",
+                "name":"西游记",
+                "price":20
+            }
+        ],
+        order: 'id'
+//        dir:'1'
+    })
+</script>

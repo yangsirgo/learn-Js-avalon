@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ms-controller="test">
+    <div ms-if="@aaa.bbb">
+        {{@show(@aaa, 'bbb', 'ccc')}}
+    </div>
+</div>
+</body>
+</html>
+<script src="../node_modules/avalon2/dist/avalon.js"></script>
+<script>
+    var vm = avalon.define({
+        $id: 'test',
+        aaa: {},
+        show: function(aaa, bbb, ccc){
+            var obj = aaa[bbb]
+            if(obj){
+                return obj[ccc]
+            }
+            return ''
+        }
+    })
+</script>

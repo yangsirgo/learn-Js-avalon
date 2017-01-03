@@ -1,0 +1,26 @@
+.app_pubprocess_loading {
+    background: url(../images/common/preloader.gif) 24px 8px no-repeat;
+    width: 200px;
+    height: 128px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-top: 60px;
+    margin-top: 120px;
+    line-height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app_pubprocess_notloading {
+    display: none;
+}
+
+.list-loading {
+    background: url(../images/small_loading.gif) 0px 0px no-repeat;
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin: auto;
+}

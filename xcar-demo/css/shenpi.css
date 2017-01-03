@@ -1,0 +1,132 @@
+
+
+.find_line_div span.first_span {
+    margin-left: 0px;
+}
+
+
+.find_line_div span{
+    margin-left: 10px;
+}
+
+.find_line_div div{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.myapplycation-info-table .first_tr_title{
+    background-color: #539BE9;color: #fff;
+}
+
+/*���ǰ��Ŀ��*/
+.w-20 {
+    width: 20px;
+}
+.app-checkbox {
+    background-position: -3px -9470px;
+    width: 14px;
+    height: 14px;
+    line-height: 18px;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+
+.design-bg-icons3 {
+    background-image: url('../images/design_bg_icons3.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+td{
+    vertical-align: middle;
+}
+
+.myapplycation-info-table td.first_td_child {
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-top: 2px;
+    border-right:0 ;
+}
+
+.myapplycation-info-table td.second_td_child {
+    width: 140px;
+    border-left:0 ;
+}
+
+.app-checkbox.checked {
+    background-position: -5px -948px;
+    width: 14px;
+    height: 14px;
+    line-height: 18px;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+
+.myapplycation-info .button_div button{
+    background-color: #539AE8;
+    border: 0;
+    color: #fff;
+    height: 22px;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+.myapplycation-info form button{
+    margin: 0 10px;
+}
+
+
+
+.myapplycation-info form button.find_button{
+    border: none;
+    background-color: #539AE8;
+    width: 72px;
+    height: 22px;
+    color: #fff;
+    vertical-align: top;
+    /*margin-left: 120px;*/
+    /*border: 1px solid #D5D6DA;*/
+}
+.myapplycation-info form button.find_button:hover{
+    background-color: #2f7fe7;
+}
+
+
+.button_SP{
+    background-color: #fff;
+    border: 1px solid #D3D6D9;
+    padding: 3px;
+    font-weight: bold;
+}
+.button_SD{
+    background-color: #fff;
+    border: 1px solid #D3D6D9;
+    padding: 3px;
+    font-weight: bold;
+}
+
+/*.handle{*/
+    /*width: 280px;*/
+/*}*/
+
+/*标签thead 百分比*/
+.perc-17 {
+    width: 17%;
+}
+.perc-20 {
+    width: 20%;
+}
+.perc-23 {
+    width: 23%;
+}
+.perc-15 {
+    width: 15%;
+}
+.perc-12 {
+    width: 12%;
+}
+.perc-14 {
+    width: 14%;
+}
+.perc-13 {
+    width: 14%;
+}

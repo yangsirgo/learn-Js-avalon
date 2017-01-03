@@ -1,0 +1,373 @@
+
+.app-header {
+    /*width: 210px;*/
+    height: 72px;
+    background-color:#539be9;
+    top: 0;
+    /*padding: 10px;*/
+    position: relative;
+}
+
+.app-header .nav {
+    display: inline-block;
+    /*height: 100%;*/
+    position: absolute;
+    /*top: 25px;*/
+    right: 0;
+    z-index: 31;
+}
+
+.app-header .nav li {
+    font-size: 14px;
+    float: left;
+    margin-left: 2px;
+    padding: 23px 21px;
+    line-height: 25px;
+    position: relative;
+
+}
+.app-header .nav li.user-name{
+    margin-right: 26px;
+}
+.app-header .nav li>a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    display: block;
+    font-family: microsoft yahei;
+}
+
+.app-header .nav li.user-name i.user-pic{
+    position: absolute;
+    top: 9px;
+    right: 0px;
+    width: 13px;
+    height: 7px;
+    background-position: -10px -31px;
+    background-image: url("../images/newcoin.png");
+}
+.logo-link{
+    width: 268px;
+    display: inline-block;
+    line-height: 72px;
+    color: #fff;
+    text-align: center;
+    background-color: #539BE9;
+    font-size: 40px;
+    font-family: microsoft yahei;
+    letter-spacing: 1px;
+}
+
+/*���²����������Ŀ*/
+.set-menu{
+    width: 164px;
+    background: #213346;
+    height: 737px;
+}
+
+#set-cont{
+    /*padding-bottom: 120px;*/
+    /*width: 100%;*/
+    margin: auto;
+    /*min-height: 800px;*/
+    /*height: 100%;*/
+}
+.header-menu{
+    color: #BDC2C8;
+    height: 56px;
+    position: relative;
+}
+.header-menu p{
+    line-height: 56px;
+    padding-left: 16px;
+}
+.header-menu span{
+    background: url("../images/newcoin.png") no-repeat -11px 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 19px;
+    right: 6px;
+    position: absolute;
+}
+.set-menu-ul li, .set-menu-ul>li>a {
+
+    /*line-height: 48px;*/
+    font-size: 16px;
+    color: #fff;
+}
+/*.set-menu-ul>li.true>a:first-child {*/
+/*/!*background: #2d3a48;*!/*/
+/*background: red;*/
+/*}*/
+.set-menu-ul>li>a.left-header{
+    height: 33px;
+    font-size: 16px;
+    padding-left: 14px;
+    background-color: #1E2F41;
+    line-height: 32px;
+    border-top: 1px solid #172534;
+    cursor: pointer;
+    /*border-top-width:1px;*/
+    /*border-top-style:solid;*/
+    /*border-top-color:#172534;*/
+}
+
+.set-menu-ul>li>a{
+    padding-left: 28px;
+    position: relative;
+    display: block;
+    color: #fff;
+}
+.set-menu-ul>li.true .menu-ul-ul {
+    display: block;
+}
+.menu-ul-ul {
+    display: none;
+}
+.menu-ul-ul li {
+    line-height: 27px;
+    font-size: 14px;
+    /*padding-left: 35px;*/
+}
+.menu-ul-ul li.first-li{
+    /*padding-top: 10px;*/
+}
+.menu-ul-ul li.first-li .button{
+    padding-top: 10px;
+}
+.menu-ul-ul li.first-li a{
+    padding-top: 10px;
+}
+
+.menu-ul-ul li.last-li{
+    margin-bottom: 7px;
+}
+.menu-ul-ul li a{
+    color:#7A8590;
+    display: inline-block;
+}
+.menu-ul-ul li a.true {
+    color: #fff;
+}
+
+.set-menu-ul .true .pic_14 {
+    background-position:-11px -14px;
+    width: 11px;
+    height: 6px;
+    top: 13px;
+    right: 9px;
+}
+
+.set-menu-ul .false .pic_14 {
+    background-position:16px -16px;
+    width: 11px;
+    height: 6px;
+    top: 13px;
+    right: 9px;
+}
+
+.pic {
+    background-image: url("../images/newcoin.png");
+    display: inline-block;
+}
+
+.set-menu-ul .pic {
+    position: absolute;
+}
+
+.menu-ul-ul li span.button.center_docu {
+    background-position: 15px -14px;
+}
+
+.menu-ul-ul li span.button.switch{
+    width: 24px;
+    height: 27px;
+}
+
+.menu-ul-ul li span.button{
+    line-height: 0;
+    margin: 0;
+    /*width: 16px;*/
+    /*height: 16px;*/
+    display: inline-block;
+    vertical-align: top;
+    /*vertical-align: middle;*/
+    border: 0 none;
+    cursor: pointer;
+    /*outline: none;*/
+    /*background-color: transparent;*/
+    background-repeat: no-repeat;
+    /*background-attachment: scroll;*/
+    background-image: url("../images/newcoin.png");
+}
+
+.menu-ul-ul li span.top_docu {
+    background-position: 15px -5px;
+}
+
+.menu-ul-ul li span.bottom_docu {
+    background-position: 15px -42px;
+}
+
+/*���ݲ���*/
+#content {
+    margin-left: 0;
+    overflow-y: scroll;
+    /*overflow-x: hidden;*/
+    height: 682px;
+    position: relative;
+}
+
+#content-size-OA{
+    margin-bottom: 20px;
+}
+
+.set-page-mbx .set-page-title {
+    line-height: 14px;
+    font-size: 14px;
+    padding-left: 29px;
+    display: block;
+    border-bottom: 1px solid #D3D6D9;
+    padding-bottom: 15px;
+    padding-top: 16px;
+}
+
+#container .pass-name {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FF9A34;
+    font-size: 18px;
+    line-height: 17px;
+}
+
+.process{
+    padding-top: 17px;
+    padding-left: 27px;
+}
+
+/*�ҵ�����*/
+
+.myapplycation-info{
+    padding-top: 18px;
+}
+
+.myapplycation-info input{
+    width: 148px;
+    height: 18px;
+    font-size: 14px;
+    color: #1C2E42;
+    vertical-align: baseline;
+}
+
+.myapplycation-info select{
+    width: 152px;
+    height: 22px;
+    /*vertical-align: middle;*/
+    font-size: 13px;
+    color: #1e2f41;
+    vertical-align: top;
+}
+
+.myapplycation-info form span{
+    line-height: 22px;
+    font-size: 14px;
+    color: #1e2f41;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.myapplycation-info form button.find_button{
+    border: 0;
+    background-color: #539AE8;
+    width: 72px;
+    height: 22px;
+    color: #fff;
+    vertical-align: top;
+    /*margin-left: 120px;*/
+    /*border: 1px solid #D5D6DA;*/
+}
+
+.myapplycation-info form .first-line-div{
+    margin-bottom: 8px;
+}
+
+.myapplycation-info form .second-line-div .bianhao{
+    margin-right: 38px;
+}
+
+.myapplycation-info form .second-line-div{
+    margin-bottom: 18px;
+}
+
+table{
+    border: 1px solid #d3D6D9;
+    border-collapse:collapse;
+}
+
+table,td{
+    border: 1px solid #d3D6D9;
+}
+
+.myapplycation-info-table{
+    width: 1165px;
+    align:center;
+    margin-bottom: 18px;
+    background-color: #fff;
+}
+.myapplycation-info-table tr{
+    height: 35px;
+}
+/*.myapplycation-info-table td{*/
+    /*width: 194px;*/
+/*}*/
+.pagi_line{
+    width: 1165px;
+}
+
+.span-block span.span-num{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D5D6DA;
+    display: inline-block;
+    /*����ie6-7*/
+    _zoom:1;*display:inline;
+    line-height: 22px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    color: #539Be9;
+    border-radius: 4px;
+}
+
+.span-block p{
+    display: inline-block;
+    _zoom:1;*display:inline;
+    margin-left: 810px;
+    text-align: right;
+}
+
+.span-block p button{
+    width: 70px;
+    height: 21px;
+    border: 1px solid #D5D6DA;
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+.myapplycation-info-table .handle a{
+    padding: 0 10px;
+    display: inline-block;
+}
+
+
+.block-div {
+    padding-left: 4px;
+}
+
+
+
+
+

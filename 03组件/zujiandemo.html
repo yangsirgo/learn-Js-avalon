@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div ms-controller='AAA'>
+        <xmp ms-widget="{is:'ms-dialog'}"></xmp>
+        <ms-dialog>
+            <button>testButton</button>
+        </ms-dialog>
+    </div>
+</body>
+</html>
+<script src="../node_modules/avalon2/dist/avalon.js"></script>
+<script>
+    var vm = avalon.define({
+        $id: "AAA",
+    });
+</script>

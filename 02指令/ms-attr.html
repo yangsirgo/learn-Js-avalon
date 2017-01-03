@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/avalon2/dist/avalon.js"></script>
+</head>
+<body ms-controller="test">
+<script>
+    //调试模式默认是打开的
+    avalon.config({debug: true});
+    avalon.define({
+        $id: 'test',
+        obj: {title: '普通 ', algin: 'left'},
+        active: {title: '激活'},
+        width: 111,
+        height: 222,
+        arr: [{img: 'aaa'}, {img: 'bbb'}, {img: 'ccc'}],
+        path: '../aaa/image.jpg',
+        toggle: true,
+        array: [{width: 1}, {height: 2}]
+    })
+
+</script>
+<span ms-attr="@obj">直接引用对象</span>
+<img ms-attr="{src: @path}" />
+<ul>
+    <li ms-for="el in @arr"><a ms-attr="{href:'http://www.ccc.xxx/ddd/'+ el.img}">下载</a></li>
+</ul>
+<span :attr="{width: @width, height: @height}">使用对象字面量</span><br/>
+<!--ms-attr指令的值不建议使用数组形式了！-->
+<span :attr="@array">直接引用数组</span><br/>
+<span :attr="[@obj, @toggle && @active ]" :click="@toggle = !@toggle">选择性添加多余属性或重写已有属性</span>
+</body>
+</html>

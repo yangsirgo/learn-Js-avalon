@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/avalon2/dist/avalon.js"></script>
+</head>
+<body>
+    <div ms-controller="test">
+        <div ms-if="@aaa.bbb">
+            {{@aaa.bbb.ccc}}这里肯定会出错
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    avalon.define({
+        $id: 'test',
+        aaa: {
+            bbb:true
+        }
+    })
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/avalon2/dist/avalon.js"></script>
+    <script>
+        var vm = avalon.define({
+            $id:'test',
+            button:{
+                buttonText:'VM内容'
+            }
+        })
+        avalon.component('ms-button',{
+            template:'<button type="button"><span><slot name="buttonText"></slot></span></button>',
+            defaults:{
+                buttonText:'默认内容'
+            },
+            soleSlot:'buttonText'
+        })
+    </script>
+</head>
+<body ms-controller="test">
+<!--下面三种方式，ms-widget才是存在，其中的is也是必须的-->
+<xmp ms-widget='[{is:"ms-button"},@button]'></xmp>
+</body>
+</html>

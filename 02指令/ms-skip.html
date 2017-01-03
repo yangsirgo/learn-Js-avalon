@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/avalon2/dist/avalon.js"></script>
+    <style>
+        .ms-controller{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<div ms-controller="AAA">
+    <div>{{@name}} : {{@color}}</div>
+    <div ms-controller="BBB">
+        <div>{{@name}} : {{@color}}</div>
+        <div ms-controller="CCC">
+            <div>{{@name}} : {{@color}}</div>
+        </div>
+        <div ms-important="DDD">
+            <div>{{@name}} : {{@color}}</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    avalon.define({
+        $id: "AAA",
+        name: "liger",
+        color: "green"
+    });
+    avalon.define({
+        $id: "BBB",
+        name: "sphinx",
+        color: "red"
+    });
+    avalon.define({
+        $id: "CCC",
+        name: "dragon" //不存在color
+
+    });
+    avalon.define({
+        $id: "DDD",
+        name: "sirenia" //不存在color
+
+    });
+</script>

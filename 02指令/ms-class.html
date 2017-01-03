@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../node_modules/avalon2/dist/avalon.js"></script>
+</head>
+<body ms-controller="test">
+    <span :class="@aaa">直接引用字符串</span>
+    <span :class="@ccc">直接引用数组</span>
+    <span :class="[@aaa, @bbb]">使用数组字面量</span>
+    <span :class="['aaa', 'bbb',(@toggle? 'ccc':'ddd')]">选择性添加类名</span>
+    <span :class="[@toggle2 && 'aaa']">选择性添加类名</span>
+    <span :class="[ @ddd + 4]">动态生成类名</span>
+</body>
+</html>
+<script>
+    avalon.define({
+        $id: 'test',
+        aaa: "aaa bbb ccc",
+        bbb: 'ddd',
+        ccc: ['xxx', 'yyy', 'zzz'],
+        ddd: 'eee',
+        toggle: true,
+        toggle2: false
+    })
+</script>

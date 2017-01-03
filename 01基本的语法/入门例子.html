@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>first example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ms-controller='test'>
+      <input ms-duplex='@name'>
+      <p>Hello,{{@name}}!</p>
+      <ul>
+        <li ms-for='($index,el) in @array'>{{$index}}--{{el}}</li>
+      </ul>
+    </body>
+</html>
+<script src='../node_modules/avalon2/dist/avalon.js'></script>
+<script type="text/javascript">
+  var vm = avalon.define({
+    $id:'test',
+    name:'yang.guochao',
+    array:[11,22,33]
+  })
+  setTimeout(function(){
+    vm.array.set(0,444)
+  },3000)
+</script>
