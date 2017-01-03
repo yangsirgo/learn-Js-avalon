@@ -1,12 +1,14 @@
-   #avalon¿ò¼ÜÊ¹ÓÃÓöµ½¼¸¸öÎÊÌâ£º
-   ### ¼æÈÝIE6ÒÔÉÏ µ«ÊÇ°³ÎÄµµÖ»ÊÇ²Ù×÷ »á³öÏÖÎÊÌâ Ä¿Ç°Ã»ÓÐ½â¾öµÄ°ì·¨ ²»ÖªµÀÊ²Ã´Ô­ÒòÔì³ÉµÄ
+ï»¿
 
-   ### Òþ²ØÊ×ÆÁ¼ÓÔØÒ³ÃæÊÇ³öÏÖµÄ»¨À¨ºÅ£¬Ê¹ÓÃ
-        visibility£ºhidden
-       µ«ÊÇÔÚIEÖÐ²¢²»ÊÇÌ«ºÃÓÃ ÈÔÈ»ÓÐ»¨À¨ºÅ³öÏÖ¡£
-       ÎÊÌâÒÑ¾­½â¾ö£ºÊ¹ÓÃcss[]ÊôÐÔÑ¡ÔñÆ÷
+#avalonå…¼å®¹IE6+
+###é—®é¢˜ä¸€ï¼š 
+    ä½†æ˜¯ä¿ºæ–‡æ¡£åªæ˜¯æ“ä½œ ä¼šå‡ºçŽ°é—®é¢˜ ç›®å‰æ²¡æœ‰è§£å†³çš„åŠžæ³• ä¸çŸ¥é“ä»€ä¹ˆåŽŸå› é€ æˆçš„
 
-           .ms-controller , [ms-controller]{
-               visibility: hidden;
-           }
+###é—®é¢˜äºŒï¼š 
+    éšè—é¦–å±åŠ è½½é¡µé¢æ˜¯å‡ºçŽ°çš„èŠ±æ‹¬å·ï¼Œä½¿ç”¨ visibilityï¼šhidden ä½†æ˜¯åœ¨IEä¸­å¹¶ä¸æ˜¯å¤ªå¥½ç”¨ ä»ç„¶æœ‰èŠ±æ‹¬å·å‡ºçŽ°ã€‚
+    é—®é¢˜å·²ç»è§£å†³ï¼šä½¿ç”¨css[]å±žæ€§é€‰æ‹©å™¨ï¼š
+
+    .ms-controller , [ms-controller]{
+        visibility: hidden;
+    }
 
