@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.brand_list_dl dt a {
+			font-family: Microsoft YaHei;
+			color: #3498db;
+			font-size: 16px;
+		}
+		.red_color {
+			color: red;
+		}
+	</style>
+</head>
+<script src="../node_modules/avalon2/dist/avalon.js"></script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="http://js.xcar.com.cn/search/dist/jquery.jsonp.js"></script>
+<body ms-controller="demo">
+<div class="container" id="targetHtml">
+<div class="main" id="mainContent">
+	<div class="bbs_channel">
+		<div class="brand_list" :visible='!!@brandlistDataparent.length'>
+			<dl  ms-for="elem in @brandlistDataparent">
+				<dl class="brand_list_dl" ms-visible="elem.type==='bbs'">
+					<dt><a ms-attr="{href:elem.post_url}" target="_blank" title="" ms-html='elem.title'></a></dt>
+					<dd class="brand_car_str" ms-html='elem.message'></dd>
+					<dd class="brand_car_ber"><a ms-attr="{href:@elem.fourm_url}" target="_blank" title="" class="info_style">{{elem.fourm_name}}</a><i style="margin-right:7px;">{{elem.publish_time}}</i>作者：<a  class="info_style" ms-attr="{href:@elem.author_url}" target="_blank" title="">{{elem.author}}</a>浏览：<span  style="margin-right: 7px;">{{elem.views}}</span>    回复：<span>{{elem.replies}}</span> </dd>
+				</dl>
+				<dl class="brand_list_dl" ms-visible="elem.type==='info'">
+					<dt><a ms-attr="{href:elem.info_url}" target="_blank" title=""  ms-html='elem.title_info'></a></dt>
+					<dd class="brand_car_str"  ms-html='elem.abstract_info'></dd>
+					<dd class="brand_car_ber">新车资讯   <i style="margin: 0 5px;">{{elem.publish_time}}</i>   评论：<span style="margin-right: 5px;">{{elem.replyNums_info}}</span>   赞：<span>{{elem.praise_num_info}}</span>  </dd>
+				</dl>
+			</dl>
+		</div>
+	</div>
+</div>
+</div>
+	<a href="" ms-html='elem.title_info'></a>
+</body>
+</html>
+<script>
+
+	/*
+	* 问题找到
+	* ' " 这两个符号需要转义
+	* '   &#x27;  " &quot;
+	* */
+	var vm = avalon.define({
+		$id: "demo",
+//		brandlistDataparent: []
+		brandlistDataparent: [],
+		elem:{
+			title_info:"<em class='red_color'>解决</em>&#x27;<em class='red_color'>借车</em><em class='red_color'>尴尬</em>&#x27; <em class='red_color'>沃尔沃</em><em class='red_color'>推出</em><em class='red_color'>专用</em><em class='red_color'>红</em><em class='red_color'>钥匙</em>"
+		}
+	})
+
+	$.jsonp({//搜索用户jsonp接口
+		//type:"get",
+		//dataType: "jsonp",
+		url:"http://sou.xcar.com.cn/XcarSearch/searchresult/together/%E8%A7%A3%E5%86%B3%E2%80%9C%E5%80%9F%E8%BD%A6%E5%B0%B4%E5%B0%AC%E2%80%9D%E6%B2%83%E5%B0%94%E6%B2%83%E6%8E%A8%E5%87%BA%E4%B8%93%E7%94%A8%E7%BA%A2%E9%92%A5%E5%8C%99/1",
+		callback:"together",
+		//timeout:400,
+		success:function(data){
+			avalon.log(data);
+			if(!data){return};
+			vm.brandlistDataparent = data["togetherResult"]["togetherViewList"];
+		},
+		error:function(xOptions, textStatus){
+			avalon.log("baocuole");
+			vm.relatedUserDataparent = [];
+		}
+	})
+
+</script>
